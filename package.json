@@ -1,0 +1,40 @@
+{
+  "name": "videonote-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/index.js",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "Josh Mu <hello@joshmu.dev> (https://joshmu.dev/)",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0",
+    "graphql-tools": "^7.0.0",
+    "mongoose": "^5.10.10",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "rimraf": "^3.0.2"
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      "src/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
+  }
+}
