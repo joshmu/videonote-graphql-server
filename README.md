@@ -11,4 +11,6 @@ This is the backend server for VideoNote - A video review app with slick intuiti
 
 ### Run it
 
+Create a `.env` at project root specifying your **MONGODB_URI** (refer to _.env.example_) and then...
+
 `npm start`
