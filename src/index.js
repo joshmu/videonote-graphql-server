@@ -1,5 +1,6 @@
 import 'dotenv/config'
 
+import cors from 'cors'
 import express from 'express'
 import { graphqlHTTP } from 'express-graphql'
 import mongoose from 'mongoose'
@@ -14,9 +15,11 @@ mongoose.connect(process.env.MONGODB_URI, {
 const app = express()
 const PORT = 4300
 
+app.use(cors())
+
 app.get('/', (req, res) => {
   res.json({
-    message: 'hello there v1',
+    message: 'VideoNote server v1',
   })
 })
 
