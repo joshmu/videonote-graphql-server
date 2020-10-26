@@ -13,6 +13,7 @@ const typeDefs = `#graphql
   scalar Date
 
   type Query {
+    getNote(_id: ID!): Note
     allNotes: [Note]
   }
 
@@ -21,8 +22,15 @@ const typeDefs = `#graphql
     content: String!
   }
 
+  input NoteUpdateInput {
+    title: String,
+    content: String
+  }
+
   type Mutation {
     createNote(input: NoteInput) : Note
+    updateNote(_id: ID!, input: NoteUpdateInput) : Note
+    deleteNote(_id: ID!) : Note
   }
 `
 
