@@ -10,6 +10,7 @@ import schema from './schema'
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useCreateIndex: true,
 })
 
 const app = express()
