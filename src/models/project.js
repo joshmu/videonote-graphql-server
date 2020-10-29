@@ -14,4 +14,4 @@ const ProjectSchema = new Schema(
   { timestamps: true }
 )
 
-export default mongoose.model('project', ProjectSchema)
+export default mongoose.model('Project', ProjectSchema)

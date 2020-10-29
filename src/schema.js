@@ -29,7 +29,7 @@ const typeDefs = `#graphql
     updatedAt: Date
   },
 
-  type Config {
+  type Settings {
     _id: ID!
     user: ID!
     playOffset: Int
@@ -46,7 +46,7 @@ const typeDefs = `#graphql
     email: String!
     username: String
     projects: [ID]
-    configId: ID
+    settings: ID
     role: String!
     createdAt: Date
     updatedAt: Date
@@ -63,7 +63,7 @@ const typeDefs = `#graphql
     password: String!
     username: String
     projects: [ID]
-    config: ID
+    settings: ID
     role: String
   }
 

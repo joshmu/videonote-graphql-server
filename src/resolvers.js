@@ -1,6 +1,6 @@
-import Config from './models/config'
 import Note from './models/note'
 import Project from './models/project'
+import Settings from './models/settings'
 import User from './models/user'
 
 export const resolvers = {
@@ -30,7 +30,7 @@ export const resolvers = {
       userDoc.projects.push(projectDoc._id)
       userDoc.save()
 
-      return projectDocj
+      return projectDoc
     },
     async createNote(root, { input }) {
       // create note
