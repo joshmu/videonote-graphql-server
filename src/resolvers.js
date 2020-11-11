@@ -6,10 +6,16 @@ import User from './models/user'
 export const resolvers = {
   Query: {
     async getProject(root, { _id }) {
-      return await Project.findById(_id).populate({
-        path: 'notes',
-        model: 'note',
-      })
+      return await Project.findById(_id).populate([
+        {
+          path: 'notes',
+          model: 'note',
+        },
+        {
+          path: 'shareProject',
+          model: 'ShareProject',
+        },
+      ])
     },
     async getNote(root, { _id }) {
       return await Note.findById(_id)

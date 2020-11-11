@@ -1,6 +1,6 @@
 # VideoNote Server
 
-This is the backend server for VideoNote - A video review app with slick intuitive controls to create timestamped notes on the fly. ✨
+This is an alternate backend server for VideoNote using graphql - A video review app with slick intuitive controls to create timestamped notes on the fly. ✨
 
 ## Tech stack
 

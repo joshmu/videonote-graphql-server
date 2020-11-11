@@ -9,7 +9,7 @@ const ProjectSchema = new Schema(
     notes: [{ type: Schema.Types.ObjectId, ref: 'Note' }],
     user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     sharedUsers: [{ type: Schema.Types.ObjectId, ref: 'User' }],
-    isPrivate: { type: Boolean, default: true },
+    share: [{ type: Schema.Types.ObjectId, ref: 'Project' }],
   },
   { timestamps: true }
 )

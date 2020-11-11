@@ -22,7 +22,7 @@ const typeDefs = `#graphql
     title: String!
     src: String
     notes: [Note]
-    isPrivate: Boolean!
+    share: ID!
     user: ID!
     sharedUsers: [ID]!
     createdAt: Date
@@ -72,7 +72,7 @@ const typeDefs = `#graphql
     title: String!
     src: String
     sharedUsers: [ID]
-    isPrivate: Boolean
+    isShared: Boolean
   }
 
   input NoteInput {
